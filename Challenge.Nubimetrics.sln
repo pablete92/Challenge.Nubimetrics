@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Nubimetrics.Api", "Challenge.Nubimetrics.Api\Challenge.Nubimetrics.Api.csproj", "{6B381383-B9FF-43CA-A07B-1AE677D168EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Nubimetrics.Application", "Challenge.Nubimetrics.Application\Challenge.Nubimetrics.Application.csproj", "{974988D8-CE3D-4485-AC86-F1CA9DED7CBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Nubimetrics.Domain", "Challenge.Nubimetrics.Domain\Challenge.Nubimetrics.Domain.csproj", "{33190839-8842-4257-96C7-76EF85FDAFE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Nubimetrics.Infrastructure", "Challenge.Nubimetrics.Infrastructure\Challenge.Nubimetrics.Infrastructure.csproj", "{A618C778-3FA8-4819-99FB-B8506BFC4A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Nubimetrics.Test", "Challenge.Nubimetrics.Test\Challenge.Nubimetrics.Test.csproj", "{7D092146-A89A-4C90-97D9-1352B3241535}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B381383-B9FF-43CA-A07B-1AE677D168EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B381383-B9FF-43CA-A07B-1AE677D168EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B381383-B9FF-43CA-A07B-1AE677D168EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B381383-B9FF-43CA-A07B-1AE677D168EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974988D8-CE3D-4485-AC86-F1CA9DED7CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974988D8-CE3D-4485-AC86-F1CA9DED7CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974988D8-CE3D-4485-AC86-F1CA9DED7CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974988D8-CE3D-4485-AC86-F1CA9DED7CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33190839-8842-4257-96C7-76EF85FDAFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33190839-8842-4257-96C7-76EF85FDAFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33190839-8842-4257-96C7-76EF85FDAFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33190839-8842-4257-96C7-76EF85FDAFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A618C778-3FA8-4819-99FB-B8506BFC4A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A618C778-3FA8-4819-99FB-B8506BFC4A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A618C778-3FA8-4819-99FB-B8506BFC4A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A618C778-3FA8-4819-99FB-B8506BFC4A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D092146-A89A-4C90-97D9-1352B3241535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D092146-A89A-4C90-97D9-1352B3241535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D092146-A89A-4C90-97D9-1352B3241535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D092146-A89A-4C90-97D9-1352B3241535}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1139C1E-C80D-4154-8C16-AEA9C1AEF039}
+	EndGlobalSection
+EndGlobal
