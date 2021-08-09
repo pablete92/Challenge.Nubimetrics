@@ -4,7 +4,6 @@ using Challenge.Nubimetrics.Application.Services.ApiServices;
 using Challenge.Nubimetrics.Infrastructure.Exceptions;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;

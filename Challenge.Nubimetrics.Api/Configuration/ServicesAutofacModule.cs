@@ -13,6 +13,10 @@ namespace Challenge.Nubimetrics.Api.Configuration
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<BusquedaServices>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<UsersService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();

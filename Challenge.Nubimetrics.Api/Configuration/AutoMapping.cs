@@ -12,6 +12,15 @@ namespace Challenge.Nubimetrics.Api.Configuration
             CreateMap<GeoInformationDataModel, GeoInformationModel>();
             CreateMap<LocationDataModel, LocationModel>();
             CreateMap<StateDataModel, StateModel>();
+
+            CreateMap<BusquedaDataModel, BusquedaModel>();
+            CreateMap<AvailableFilterDataModel, AvailableFilterModel>();
+            CreateMap<AvailableFilterValueDataModel, AvailableFilterValueModel>();
+            CreateMap<SortDataModel, SortModel>();
+            CreateMap<FilterDataModel, FilterModel>();
+            CreateMap<FilterValueDataModel, FilterValueModel>();
+            CreateMap<PagingDataModel, PagingModel>();
+            CreateMap<ResultDataModel, ResultModel>().ForMember(d => d.SellerId, o => o.MapFrom(s => s.Seller.Id));
         }
     }
 }
