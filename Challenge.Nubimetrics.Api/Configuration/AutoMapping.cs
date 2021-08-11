@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Challenge.Nubimetrics.Application.Models;
 using Challenge.Nubimetrics.Domain.DataModels;
+using Challenge.Nubimetrics.Domain.Entities;
 
 namespace Challenge.Nubimetrics.Api.Configuration
 {
@@ -21,6 +22,9 @@ namespace Challenge.Nubimetrics.Api.Configuration
             CreateMap<FilterValueDataModel, FilterValueModel>();
             CreateMap<PagingDataModel, PagingModel>();
             CreateMap<ResultDataModel, ResultModel>().ForMember(d => d.SellerId, o => o.MapFrom(s => s.Seller.Id));
+
+            CreateMap<UserEntity, UserModel>().ReverseMap();
+
         }
     }
 }

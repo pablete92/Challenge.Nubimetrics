@@ -1,5 +1,8 @@
-﻿using Challenge.Nubimetrics.Infrastructure.Extensions;
+﻿using Challenge.Nubimetrics.Infrastructure.Data;
+using Challenge.Nubimetrics.Infrastructure.Data.Contracts;
+using Challenge.Nubimetrics.Infrastructure.Extensions;
 using Challenge.Nubimetrics.Infrastructure.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
@@ -67,6 +70,32 @@ namespace Challenge.Nubimetrics.Infrastructure.Services
                     return JsonConvert.DeserializeObject<TResponse>(response);
                 }
             }
+        }
+    }
+    public abstract class ServiceBase<TContext, TEntity>
+    where TContext : DbContext
+    where TEntity : EntityBase
+    {
+        protected readonly ILogger<ServiceBase<TContext, TEntity>> logger;
+        protected IRepositoryQuery<TContext, TEntity> RepositoryQuery { get; }
+        protected IRepositoryCommand<TContext, TEntity> RepositoryCommand { get; }
+        protected IUnitOfWork<TContext> UnitOfWork { get; }
+
+        private ServiceBase(ILogger<ServiceBase<TContext, TEntity>> logger, IUnitOfWork<TContext> unitOfWork)
+        {
+            this.logger = logger;
+            UnitOfWork = unitOfWork;
+        }
+        protected ServiceBase(ILogger<ServiceBase<TContext, TEntity>> logger, IRepositoryQuery<TContext, TEntity> repositoryQuery, IUnitOfWork<TContext> unitOfWork)
+            : this(logger, unitOfWork)
+        {
+            RepositoryQuery = repositoryQuery;
+        }
+
+        protected ServiceBase(ILogger<ServiceBase<TContext, TEntity>> logger, IRepositoryCommand<TContext, TEntity> repositoryCommand, IUnitOfWork<TContext> unitOfWork)
+            : this(logger, unitOfWork)
+        {
+            RepositoryCommand = repositoryCommand;
         }
     }
 }

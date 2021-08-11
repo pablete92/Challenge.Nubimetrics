@@ -14,13 +14,13 @@ namespace Challenge.Nubimetrics.Application.Handlers.Paises
     {
     }
 
-    public class PaisGetAllHandlers : IRequestHandler<PaisGetAllRequest, IEnumerable<PaisModel>>
+    public class PaisGetAllHandler : IRequestHandler<PaisGetAllRequest, IEnumerable<PaisModel>>
     {
-        private readonly ILogger<PaisGetAllHandlers> logger;
+        private readonly ILogger<PaisGetAllHandler> logger;
         private readonly IPaisesService service;
         private readonly IMapper mapper;
 
-        public PaisGetAllHandlers(ILogger<PaisGetAllHandlers> logger,
+        public PaisGetAllHandler(ILogger<PaisGetAllHandler> logger,
             IPaisesService service,
             IMapper mapper)
         {

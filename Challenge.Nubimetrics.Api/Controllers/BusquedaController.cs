@@ -18,7 +18,7 @@ namespace Challenge.Nubimetrics.Api.Controllers
         }
 
         [HttpGet("{termino}")]
-        public async Task<ActionResult<IEnumerable<BusquedaModel>>> Get(string termino)
+        public async Task<ActionResult<IEnumerable<BusquedaModel>>> Get([FromRoute]string termino)
         {
             var result = await mediator.Send(new BusquedaGetByTerminoRequest(termino));
 

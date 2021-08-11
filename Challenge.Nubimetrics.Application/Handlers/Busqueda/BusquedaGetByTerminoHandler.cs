@@ -18,13 +18,13 @@ namespace Challenge.Nubimetrics.Application.Handlers.Busqueda
         public string Termino { get; set; }
     }
     
-    public class BusquedaGetByTerminoHandlers : IRequestHandler<BusquedaGetByTerminoRequest, BusquedaModel>
+    public class BusquedaGetByTerminoHandler : IRequestHandler<BusquedaGetByTerminoRequest, BusquedaModel>
     {
-        private readonly ILogger<BusquedaGetByTerminoHandlers> logger;
+        private readonly ILogger<BusquedaGetByTerminoHandler> logger;
         private readonly IBusquedaServices service;
         private readonly IMapper mapper;
 
-        public BusquedaGetByTerminoHandlers(ILogger<BusquedaGetByTerminoHandlers> logger,
+        public BusquedaGetByTerminoHandler(ILogger<BusquedaGetByTerminoHandler> logger,
             IBusquedaServices service,
             IMapper mapper)
         {

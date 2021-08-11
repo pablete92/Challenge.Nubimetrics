@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Challenge.Nubimetrics.Application.Services;
 using Challenge.Nubimetrics.Application.Services.ApiServices;
 using Challenge.Nubimetrics.Infrastructure.Services;
 
@@ -18,6 +19,10 @@ namespace Challenge.Nubimetrics.Api.Configuration
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<UsersService>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<UserDbService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }
