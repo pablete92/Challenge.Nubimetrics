@@ -14,7 +14,7 @@ namespace Challenge.Nubimetrics.Api.Configuration
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<BusquedaServices>()
+            builder.RegisterType<BusquedaService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 
@@ -23,6 +23,14 @@ namespace Challenge.Nubimetrics.Api.Configuration
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<UserDbService>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<CurrencyConversionService>()
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+            
+            builder.RegisterType<LogginService>()
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

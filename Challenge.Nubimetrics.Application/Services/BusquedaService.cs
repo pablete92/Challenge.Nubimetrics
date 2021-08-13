@@ -14,9 +14,9 @@ namespace Challenge.Nubimetrics.Application.Services.ApiServices
         Task<BusquedaDataModel> GetBusquedaByTermino(string termino);
     }
 
-    public class BusquedaServices : ServiceBase<MercadoLibreOptions>, IBusquedaServices
+    public class BusquedaService : ServiceBase<MercadoLibreOptions>, IBusquedaServices
     {
-        public BusquedaServices(ILogger<ServiceBase<MercadoLibreOptions>> logger,
+        public BusquedaService(ILogger<ServiceBase<MercadoLibreOptions>> logger,
             IHttpClientFactory httpClientFactory,
             IOptions<MercadoLibreOptions> options)
             : base(logger, httpClientFactory, options) { }

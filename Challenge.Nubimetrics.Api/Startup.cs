@@ -50,7 +50,7 @@ namespace Challenge.Nubimetrics.Api
 
             services.Configure<MercadoLibreOptions>(Configuration.GetSection("MercadoLibre"));
 
-            //services.Configure<CsvLoggingOptions>(Configuration.GetSection("CsvLogging"));
+            services.Configure<LoggingDiskOptions>(Configuration.GetSection("LoggingDisk"));
 
             services.AddHttpClient(Configuration.GetSection("MercadoLibre:HttpClientName").Value, httpClient =>
             {

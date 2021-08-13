@@ -25,6 +25,8 @@ namespace Challenge.Nubimetrics.Api.Configuration
 
             CreateMap<UserEntity, UserModel>().ReverseMap();
 
+            CreateMap<CurrencyConversionDataModel, CurrencyConversionModel>().ReverseMap();
+            CreateMap<CurrencyConversionToDolarDataModel, CurrencyConversionToDolarModel>().ReverseMap();
         }
     }
 }

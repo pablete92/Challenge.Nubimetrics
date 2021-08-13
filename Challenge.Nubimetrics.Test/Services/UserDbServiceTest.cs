@@ -36,29 +36,29 @@ namespace Challenge.Nubimetrics.Test.Services
         //    Assert.IsNotNull(result);
         //}
 
-        [TestCase]
-        [Order(1)]
-        public void InsertUser()
-        {
-            userEntity = UserMock.UserEntityMock();
+        //[TestCase]
+        //[Order(1)]
+        //public void InsertUser()
+        //{
+        //    userEntity = UserMock.UserEntityMock();
 
-            userDbService.InsertUser(userEntity).Wait();
+        //    userDbService.InsertUser(userEntity).Wait();
 
-            Assert.AreNotEqual(0, userEntity.ID);
-        }
+        //    Assert.AreNotEqual(0, userEntity.ID);
+        //}
 
-        [TestCase("Update")]
-        [Order(2)]
-        public void UpdateUser(string stringUpdate)
-        {
-            userEntity.Nombre = stringUpdate;
-            userEntity.Apellido = stringUpdate;
-            userEntity.Email = stringUpdate;
-            userEntity.Password = stringUpdate;
+        //[TestCase("Update")]
+        //[Order(2)]
+        //public void UpdateUser(string stringUpdate)
+        //{
+        //    userEntity.Nombre = stringUpdate;
+        //    userEntity.Apellido = stringUpdate;
+        //    userEntity.Email = stringUpdate;
+        //    userEntity.Password = stringUpdate;
 
-            userDbService.UpdateUser(userEntity).Wait();
-            Assert.Pass();
-        }
+        //    userDbService.UpdateUser(userEntity).Wait();
+        //    Assert.Pass();
+        //}
 
 
         //[TestCase]

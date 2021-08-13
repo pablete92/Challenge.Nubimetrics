@@ -14,7 +14,7 @@ namespace Challenge.Nubimetrics.Test.Services.ApiServices
         [SetUp]
         public void SetUp()
         {
-            service = ServiceBuilder<MercadoLibreOptions>.GetService<BusquedaServices>();
+            service = ServiceBuilder<MercadoLibreOptions>.GetService<BusquedaService>();
         }
 
         //[TestCase("Iphone")]
