@@ -2,7 +2,6 @@
 using Challenge.Nubimetrics.Application.Models;
 using Challenge.Nubimetrics.Application.Services;
 using Challenge.Nubimetrics.Domain.Entities;
-using Challenge.Nubimetrics.Infrastructure.Services;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;

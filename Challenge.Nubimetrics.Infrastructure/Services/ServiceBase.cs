@@ -86,12 +86,6 @@ namespace Challenge.Nubimetrics.Infrastructure.Services
             this.logger = logger;
             UnitOfWork = unitOfWork;
         }
-        protected ServiceBase(ILogger<ServiceBase<TContext, TEntity>> logger, IRepositoryQuery<TContext, TEntity> repositoryQuery, IUnitOfWork<TContext> unitOfWork)
-            : this(logger, unitOfWork)
-        {
-            RepositoryQuery = repositoryQuery;
-        }
-
         protected ServiceBase(ILogger<ServiceBase<TContext, TEntity>> logger, IRepositoryCommand<TContext, TEntity> repositoryCommand, IUnitOfWork<TContext> unitOfWork)
             : this(logger, unitOfWork)
         {

@@ -10,10 +10,10 @@ namespace Challenge.Nubimetrics.Domain.Mapping
         {
             builder.ToTable("User");
             builder.HasKey(e => e.ID);
-            builder.Property(e => e.Nombre).HasMaxLength(50).IsUnicode(false);
-            builder.Property(e => e.Apellido).HasMaxLength(50).IsUnicode(false);
-            builder.Property(e => e.Email).HasMaxLength(50).IsUnicode(true);
-            builder.Property(e => e.Password).HasMaxLength(50).IsUnicode(true);
+            builder.Property(e => e.Nombre).HasMaxLength(100).IsUnicode(false);
+            builder.Property(e => e.Apellido).HasMaxLength(100).IsUnicode(false);
+            builder.Property(e => e.Email).HasMaxLength(150).IsUnicode(true);
+            builder.Property(e => e.Password).HasMaxLength(100).IsUnicode(true);
         }
     }
 }

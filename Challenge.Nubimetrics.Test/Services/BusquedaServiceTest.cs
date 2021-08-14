@@ -17,12 +17,12 @@ namespace Challenge.Nubimetrics.Test.Services.ApiServices
             service = ServiceBuilder<MercadoLibreOptions>.GetService<BusquedaService>();
         }
 
-        //[TestCase("Iphone")]
-        //public void GetBusquedaByTermino(string termino)
-        //{
-        //    var result = service.GetBusquedaByTermino(termino).Result;
+        [TestCase("Iphone")]
+        public void GetBusquedaByTermino(string termino)
+        {
+            var result = service.GetBusquedaByTermino(termino).Result;
 
-        //    Assert.IsNotNull(result);
-        //}
+            Assert.IsNotNull(result);
+        }
     }
 }

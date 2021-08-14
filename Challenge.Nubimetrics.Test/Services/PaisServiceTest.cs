@@ -17,44 +17,44 @@ namespace Challenge.Nubimetrics.Test.Services.ApiServices
             service = ServiceBuilder<MercadoLibreOptions>.GetService<PaisesService>();
         }
 
-        //[TestCase("AR")]
-        //public void GetPaisByCodeTestAR(string code)
-        //{
-        //    var result = service.GetPaisByCode(code).Result;
+        [TestCase("AR")]
+        public void GetPaisByCodeTestAR(string code)
+        {
+            var result = service.GetPaisByCode(code).Result;
 
-        //    Assert.IsNotNull(result);
-        //}
+            Assert.IsNotNull(result);
+        }
 
-        //[TestCase("BR")]
-        //public void GetPaisByCodeTestBR(string code)
-        //{
-        //    var result = service.GetPaisByCode(code).Result;
+        [TestCase("BR")]
+        public void GetPaisByCodeTestBR(string code)
+        {
+            var result = service.GetPaisByCode(code).Result;
 
-        //    Assert.IsNotNull(result);
-        //}
+            Assert.IsNotNull(result);
+        }
 
-        //[TestCase("CO")]
-        //public void GetPaisByCodeTestCO(string code)
-        //{
-        //    var result = service.GetPaisByCode(code).Result;
+        [TestCase("CO")]
+        public void GetPaisByCodeTestCO(string code)
+        {
+            var result = service.GetPaisByCode(code).Result;
 
-        //    Assert.IsNotNull(result);
-        //}
+            Assert.IsNotNull(result);
+        }
 
-        //[TestCase("CN")]
-        //public void GetPaisByCodeTestCN(string code)
-        //{
-        //    var result = service.GetPaisByCode(code).Result;
+        [TestCase("CN")]
+        public void GetPaisByCodeTestCN(string code)
+        {
+            var result = service.GetPaisByCode(code).Result;
 
-        //    Assert.IsNotNull(result);
-        //}
+            Assert.IsNotNull(result);
+        }
 
-        //[TestCase()]
-        //public void GetAllPais()
-        //{
-        //    var result = service.GetAllPais().Result;
+        [TestCase()]
+        public void GetAllPais()
+        {
+            var result = service.GetAllPais().Result;
 
-        //    Assert.IsNotNull(result);
-        //}
+            Assert.IsNotNull(result);
+        }
     }
 }

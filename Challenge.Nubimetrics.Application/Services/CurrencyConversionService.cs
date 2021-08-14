@@ -30,7 +30,17 @@ namespace Challenge.Nubimetrics.Application.Services
 
             string url = string.Format(Options.UrlCurrencyConversion);
 
-            return await Get<IEnumerable<CurrencyConversionDataModel>>(url);
+            var currencies = await Get<IEnumerable<CurrencyConversionDataModel>>(url);
+
+            if (currencies == null)
+                return null;
+
+            foreach (var currency in currencies)
+            {
+                logger.LogInformation($"Obtengo la conversion para el ID: {{Id}}", currency.Id);
+                currency.ToDolar = await GetConversionToDolar(currency.Id);
+            }
+            return currencies;
         }
 
         public async Task<CurrencyConversionToDolarDataModel> GetConversionToDolar(string from)

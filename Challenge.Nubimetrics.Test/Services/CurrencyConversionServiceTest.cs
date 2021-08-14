@@ -17,22 +17,20 @@ namespace Challenge.Nubimetrics.Test.Services
             service = ServiceBuilder<MercadoLibreOptions>.GetService<CurrencyConversionService>();
         }
 
-        //[TestCase]
-        //public void GetAllCurrencies()
-        //{
-        //    var result = service.GetAllCurrencies().Result;
-
-        //    Assert.IsNotNull(result);
-        //}
-
-        [TestCase("ARS", "USD")]
-        public void GetAllCurrencies(string from, string to)
+        [TestCase]
+        public void GetAllCurrencies()
         {
-            var result = service.GetConversionToDolar(from, to).Result;
+            var result = service.GetAllCurrencies().Result;
 
             Assert.IsNotNull(result);
         }
 
+        [TestCase("ARS", "USD")]
+        public void GetAllCurrencies(string from, string to)
+        {
+            var result = service.GetConversionToDolar(from).Result;
 
+            Assert.IsNotNull(result);
+        }
     }
 }

@@ -4,7 +4,6 @@ using Challenge.Nubimetrics.Application.Services;
 using Challenge.Nubimetrics.Infrastructure.Exceptions;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,12 +40,6 @@ namespace Challenge.Nubimetrics.Application.Handlers.CurrencyConversion
 
             if (result == null)
                 throw new NotFoundProjectException("No hay conversiones");
-
-            foreach (var currency in result)
-            {
-                logger.LogInformation($"Obtengo la conversion para el ID: {{Id}}", currency.Id);
-                currency.ToDolar = await service.GetConversionToDolar(currency.Id);
-            }
 
             await serviceLoggin.WriteDisk(result);
 

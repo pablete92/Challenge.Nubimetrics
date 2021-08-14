@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Challenge.Nubimetrics.Application.Services;
+﻿using Challenge.Nubimetrics.Application.Services;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
@@ -19,13 +18,11 @@ namespace Challenge.Nubimetrics.Application.Handlers.Usuarios
     {
         private readonly ILogger<UsuarioDeleteHandler> logger;
         private readonly IUserDbService service;
-        private readonly IMapper mapper;
 
-        public UsuarioDeleteHandler(ILogger<UsuarioDeleteHandler> logger, IUserDbService service, IMapper mapper)
+        public UsuarioDeleteHandler(ILogger<UsuarioDeleteHandler> logger, IUserDbService service)
         {
             this.logger = logger;
             this.service = service;
-            this.mapper = mapper;
         }
 
         public async Task<Unit> Handle(UsuarioDeleteRequest request, CancellationToken cancellationToken)

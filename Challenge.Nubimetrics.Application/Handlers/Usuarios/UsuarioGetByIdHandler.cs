@@ -36,7 +36,6 @@ namespace Challenge.Nubimetrics.Application.Handlers.Usuarios
             if (request.Id == 0)
                 throw new NotFoundProjectException("Id de usuario invalido.");
 
-
             logger.LogInformation($"Obtener el usuario. Id: {{Id}}", request.Id);
             var result = await service.GetByID(request.Id);
 
